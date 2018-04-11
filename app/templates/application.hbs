@@ -1,5 +1,7 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
+{{dialog-one id="d-one"}}
+{{dialog-two id="d-two"}}
+{{dialog-three id="d-three"}}
 
-{{outlet}}
+<button {{action (dialog '#d-one')}}>Open Diag One</button>
+<button {{action (dialog '#d-two')}}>Open Diag Two</button>
+<button {{action (dialog '#d-three')}}>Open Diag Three</button>
