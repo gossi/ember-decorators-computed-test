@@ -10,9 +10,9 @@ export default class DialogOne extends DummyDialog {
     return 'diag-one';
   }
 
-  @computed
+  @computed('athlas.formOkLabel')
   get okLabel() {
-    return 'Okey';
+    return 'Okey'+ this.athlas.formOkLabel;
   }
 
   @computed
