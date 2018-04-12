@@ -1,21 +1,21 @@
-import DummyDialog from 'ember-decorators-computed-test/components/dummy-dialog';
+import Dialog from 'ember-athlas-modal/components/form-dialog';
 import { computed } from '@ember-decorators/object';
 
-export default class DialogOne extends DummyDialog {
+export default class DialogOne extends Dialog {
 
   bodyComponent: string = 'dialog-one/body';
 
-  @computed
+  @computed()
   get title() {
     return 'diag-one';
   }
 
-  @computed
+  @computed('athlas.formOkLabel')
   get okLabel() {
-    return 'Okey';
+    return 'Okey'+ this.athlas.formOkLabel;
   }
 
-  @computed
+  @computed()
   get okClass() {
     return 'btn-secondary';
   }
